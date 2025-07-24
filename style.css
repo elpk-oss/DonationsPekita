@@ -1,3 +1,6 @@
+/* Copia y pega aquí el mismo código CSS que te di en la respuesta anterior */
+/* No hay cambios necesarios para el CSS por el cambio a "donación" o la integración con Google Forms */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -63,7 +66,7 @@ h1, h2 {
     margin-bottom: 15px;
 }
 
-.product-card .price {
+.product-card .price { /* Podrías cambiar 'price' por 'suggested-value' o similar si quieres */
     font-size: 1.6em;
     font-weight: bold;
     color: #43b581; /* Verde */
