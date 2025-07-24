@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Intercambio de Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tienda de Intercambio de Minecraft</h1>
+        <p style="text-align: center;">Selecciona lo que deseas "adquirir" a cambio de dinero o ítems de servidor de Minecraft.</p>
+
+        <h2>Nuestras "Ofertas"</h2>
+        <div class="product-grid" id="productGrid">
+            </div>
+
+        <hr>
+
+        <h2>Tu Solicitud</h2>
+        <form id="purchaseForm" class="form-section">
+            <div class="form-group">
+                <label for="selectedItem">Artículo Seleccionado:</label>
+                <input type="text" id="selectedItem" name="selectedItem" readonly required>
+            </div>
+
+            <div class="form-group">
+                <label for="discordUsername">Tu Nombre de Usuario de Discord (ej: Usuario#1234 o @usuario):</label>
+                <input type="text" id="discordUsername" name="discordUsername" placeholder="TuUsuario#1234" required>
+            </div>
+
+            <div class="form-group">
+                <label for="minecraftServer">Servidor de Minecraft (ej: Hypixel, Minemora, Tu Servidor Privado):</label>
+                <input type="text" id="minecraftServer" name="minecraftServer" placeholder="Nombre del servidor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="moneyType">Tipo de "Pago":</label>
+                <select id="moneyType" name="moneyType" required>
+                    <option value="">Selecciona el tipo de "pago"</option>
+                    <option value="dinero">Dinero del Servidor</option>
+                    <option value="item">Ítems / Kit Personalizado</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="moneyAmountGroup">
+                <label for="moneyAmount">Cantidad de Dinero del Servidor a dar:</label>
+                <input type="number" id="moneyAmount" name="moneyAmount" placeholder="Ej: 5000" min="0">
+            </div>
+
+            <div class="form-group" id="dineroAdicionalGroup">
+                <label for="dineroAdicional">Cantidad de Dinero a Elección (Especifica el monto):</label>
+                <input type="number" id="dineroAdicional" name="dineroAdicional" placeholder="Ej: 7500" min="0">
+            </div>
+
+            <div class="form-group" id="kitDetailsGroup">
+                <label for="kitDetails">Detalles del Kit / Ítems a dar (Sé específico):</label>
+                <textarea id="kitDetails" name="kitDetails" placeholder="Ej: 10 Diamantes, 2 Espadas de Netherite, 64 Panes"></textarea>
+            </div>
+            
+            <button type="submit" class="button-submit">Enviar Solicitud</button>
+            <div id="message"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
