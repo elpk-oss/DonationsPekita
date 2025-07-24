@@ -11,55 +11,32 @@
         <h1>¡Apoya el Servidor de Minecraft!</h1>
         <p style="text-align: center;">Tu apoyo es fundamental para mantener el servidor activo y mejorar la experiencia de todos. ¡Gracias por considerar una donación!</p>
 
-        <h2>Opciones de Donación</h2>
-        <div class="product-grid" id="donationOptions">
-            </div>
+        <hr>
+
+        <h2>Envía tu Propuesta de Donación</h2>
+        <p style="text-align: center; color: #dcddde;">Rellena el siguiente formulario con los detalles de tu donación. ¡Te contactaré por Discord para coordinar!</p>
+        
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdLlNkHV4E4q0xKeP5YtXcAUi9R_lwAXL643Kkv3iM-3rXkIA/viewform?embedded=true" 
+            width="100%" 
+            height="900" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+            style="display: block; margin: 0 auto; max-width: 640px;"
+        >
+            Cargando...
+        </iframe>
 
         <hr>
 
-        <h2>Tu Propuesta de Donación</h2>
-        <form id="donationForm" class="form-section" target="hidden_iframe" onsubmit="submitted=true;">
-            <div class="form-group">
-                <label for="selectedDonation">Opción de Donación Seleccionada:</label>
-                <input type="text" id="selectedDonation" name="entry.DONATION_ITEM" readonly required>
-                </div>
-
-            <div class="form-group">
-                <label for="discordUsername">Tu Nombre de Usuario de Discord (ej: Usuario#1234 o @usuario):</label>
-                <input type="text" id="discordUsername" name="entry.DISCORD_USERNAME" placeholder="TuUsuario#1234" required>
-                </div>
-
-            <div class="form-group">
-                <label for="minecraftServer">Servidor de Minecraft donde harás la donación (ej: Hypixel, Minemora, Tu Servidor Privado):</label>
-                <input type="text" id="minecraftServer" name="entry.MINECRAFT_SERVER" placeholder="Nombre del servidor" required>
-                </div>
-
-            <div class="form-group">
-                <label for="donationType">Tipo de Recurso a Donar:</label>
-                <select id="donationType" name="entry.DONATION_TYPE" required>
-                    <option value="">Selecciona el tipo de recurso</option>
-                    <option value="dinero">Dinero del Servidor</option>
-                    <option value="item">Ítems / Kit Personalizado</option>
-                </select>
+        <div class="form-section">
+            <h2>Donadores Recientes (Ejemplo)</h2>
+            <p>Aquí podríamos tener una tabla de los donadores más recientes. <br>
+            Para que esto sea dinámico y se actualice automáticamente con las donaciones que recibes, necesitarías una configuración un poco más avanzada (como incrustar una Hoja de Cálculo de Google, o un backend con base de datos).<br>
+            Por ahora, esto es solo un marcador de posición.</p>
             </div>
-
-            <div class="form-group" id="moneyAmountGroup">
-                <label for="moneyAmount">Cantidad de Dinero del Servidor que Donarás:</label>
-                <input type="number" id="moneyAmount" name="entry.MONEY_AMOUNT" placeholder="Ej: 5000" min="0">
-                </div>
-
-            <div class="form-group" id="kitDetailsGroup">
-                <label for="kitDetails">Detalles del Kit / Ítems que Donarás (Sé específico):</label>
-                <textarea id="kitDetails" name="entry.KIT_DETAILS" placeholder="Ej: 10 Diamantes, 2 Espadas de Netherite, 64 Panes"></textarea>
-                </div>
-            
-            <button type="submit" class="button-submit">Enviar Propuesta de Donación</button>
-            <div id="message"></div>
-        </form>
-
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){showMessage('¡Tu propuesta de donación ha sido enviada! Te contactaremos por Discord.', 'success');}"></iframe>
+        
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
